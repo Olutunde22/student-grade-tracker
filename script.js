@@ -70,7 +70,9 @@ studentForm.addEventListener('submit', (event) => {
         return;
     }
 
-    students.push({ id: students.length + 1, name, grade });
+    const lastStudentId = students[students.length - 1].id;
+
+    students.push({ id: lastStudentId + 1, name, grade });
     localStorage.setItem('students', JSON.stringify(students));
 
     studentForm.reset();
