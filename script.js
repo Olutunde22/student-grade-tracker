@@ -83,7 +83,7 @@ studentForm.addEventListener('submit', (event) => {
 const calculateAverageGrade = () => {
     const students = JSON.parse(localStorage.getItem('students'));
     const averageGrade = students.reduce((sum, student) => sum + Number(student.grade), 0) / students.length;
-    document.getElementById('average-grade-value').textContent = averageGrade.toFixed(2);
+    document.getElementById('average-grade-value').textContent = isNaN(averageGrade) ? 0 : averageGrade.toFixed(2);
 }
 
 // Delete student function
