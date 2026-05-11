@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <div class="container">
+            <header class="header">
+                <h1>Student Grades</h1>
+            </header>
+
+            <section class="content-card">
+                <form id="student-form">
+                    <input id="name" name="name" type="text" placeholder="Student Name" />
+                    <input id="grade" name="grade" type="number" placeholder="Student Grade" />
+                    <button type="submit">Add Student</button>
+                </form>
+
+                <div id="average-grade">
+                    <p>Average Grade: <span id="average-grade-value">0</span></p>
+                </div>
+
+                <table id="student-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Grade</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body"></tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
