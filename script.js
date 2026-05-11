@@ -101,8 +101,8 @@ const renderStudentsTable = () => {
     calculateAverageGrade();
 
     // Clear previously rendered data rows
-    while (studentTableBody.rows.length > 1) {
-        studentTableBody.deleteRow(1);
+    while (studentTableBody.rows.length > 0) {
+        studentTableBody.deleteRow(0);
     }
 
     students.forEach(student => {
